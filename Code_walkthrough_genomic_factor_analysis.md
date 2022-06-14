@@ -1,50 +1,8 @@
-Code walkthrough for genomic factor analysis of modifiable risk for Alzheimer’s disease
+Code walkthrough for genomic factor analysis of modifiable risk for
+Alzheimer’s disease
 ================
 Isabelle Foote
 2022-06-13
-
-- [Overview](#overview)
-- [GWAS data identification and formatting](#gwas-data-identification-and-formatting)
-  * [Criteria for inclusion](#criteria-for-inclusion)
-    + [Links to the GWAS data used in our current study](#links-to-the-gwas-data-used-in-our-current-study)
-  * [Example code for formatting UK Biobank GWAS data](#example-code-for-formatting-uk-biobank-gwas-data)
-    + [Set your working directory and load the required packages](#set-your-working-directory-and-load-the-required-packages)
-    + [Make an edited version of the variant data to merge with the GWAS datasets](#make-an-edited-version-of-the-variant-data-to-merge-with-the-gwas-datasets)
-    + [Format UK Biobank GWAS data ready for munging](#format-uk-biobank-gwas-data-ready-for-munging)
-- [LD score regression](#ld-score-regression)
-    + [Install LDSC software](#install-ldsc-software)
-  * [Munge data](#munge-data)
-  * [Calculating univariate SNP-based heritability](#calculating-univariate-snp-based-heritability)
-  * [Calculating pairwise genetic correlations](#calculating-pairwise-genetic-correlations)
-  * [Plotting the data](#plotting-the-data)
-    + [Genetic correlation matrix](#genetic-correlation-matrix)
-    + [Undirected weighted graph](#undirected-weighted-graph)
-- [Genomic SEM](#genomic-sem)
-    + [Install *GenomicSEM*](#install--genomicsem-)
-    + [Set working directory and load the *GenomicSEM* package](#set-working-directory-and-load-the--genomicsem--package)
-  * [Munge data](#munge-data-1)
-  * [Exploratory factor analysis performed in the odd autosomes](#exploratory-factor-analysis-performed-in-the-odd-autosomes)
-    + [Load the additional required packages](#load-the-additional-required-packages)
-    + [Conduct multivariable LD score regression (odd autosomes)](#conduct-multivariable-ld-score-regression--odd-autosomes-)
-    + [Exploratory factor analysis](#exploratory-factor-analysis)
-    + [EFA loadings plot](#efa-loadings-plot)
-  * [Confirmatory factor analysis performed in the even autosomes](#confirmatory-factor-analysis-performed-in-the-even-autosomes)
-    + [Conduct multivariable LD score regression (even autosomes)](#conduct-multivariable-ld-score-regression--even-autosomes-)
-    + [Confirmatory factor analysis](#confirmatory-factor-analysis)
-    + [Plotting CFA models](#plotting-cfa-models)
-  * [Follow-up genome-wide analyses](#follow-up-genome-wide-analyses)
-    + [Genome-wide multivariable LD score regression](#genome-wide-multivariable-ld-score-regression)
-    + [Genome-wide CFA](#genome-wide-cfa)
-    + [Additional SEM modelling](#additional-sem-modelling)
-    + [Common factor model](#common-factor-model)
-    + [Hierarchal model](#hierarchal-model)
-    + [Bifactor model](#bifactor-model)
-  * [Models without the APOE region](#models-without-the-apoe-region)
-- [Sensitivity analyses](#sensitivity-analyses)
-    + [LD score regression in different chromosomal groupings](#ld-score-regression-in-different-chromosomal-groupings)
-  * [EFA comparison across chromosomal groupings](#efa-comparison-across-chromosomal-groupings)
-  * [CFA comparison across chromosomal groupings](#cfa-comparison-across-chromosomal-groupings)
-- [Final remarks](#final-remarks)
 
 # Overview
 
@@ -1007,7 +965,7 @@ dev.off()
 
 **Output image:**
 
-![](/../main/Images/ldscmatrix_bivariate.jpg)
+![](ldscmatrix_bivariate.jpg)
 
 ### Undirected weighted graph
 
@@ -1076,7 +1034,7 @@ qplot <- qgraph(all_matrix, layout = "spring", minimum = 0, posCol = "darkblue",
 dev.off()
 ```
 
-**Output image:** ![](/../main/Images/undirected_weighted_graph_kunkle.jpg)
+**Output image:** ![](undirected_weighted_graph_kunkle.jpg)
 
 # Genomic SEM
 
@@ -1367,7 +1325,7 @@ dev.off()
 
 The above code gives us our 3-factor EFA graph:
 
-![](/../main/Images/EFA_loadings_plot_Kunkle.jpg)
+![](EFA_loadings_plot_Kunkle.jpg)
 
 ## Confirmatory factor analysis performed in the even autosomes
 
@@ -1504,7 +1462,7 @@ the standardised results of the CFA for *model 5* in the even autosomes
 (see code above). This was the best fitting model that we tested so we
 took it forward for subsequent analysis in data from all autosomes.
 
-![](/../main/Images/CFA_even_best_model.png)
+![](CFA_even_best_model.png)
 
 ## Follow-up genome-wide analyses
 
@@ -1542,7 +1500,7 @@ CFAoutput_all
 
 *The path diagram of the best-fitting CFA model (all autosomes):*
 
-![](/../main/Images/CFA_all_best_model.png)
+![](CFA_all_best_model.png)
 
 ### Additional SEM modelling
 
@@ -1572,7 +1530,7 @@ CommonFactor
 
 *The path diagram of the common factor model:*
 
-![](/../main/Images/CommonFactor_all_SBP.png)
+![](CommonFactor_all_SBP.png)
 
 **Note:** Here in this walkthrough we use the LDSC output that includes
 systolic blood pressure in the common factor model. However, in our
@@ -1601,7 +1559,7 @@ hierarchal
 
 *The path diagram of the hierarchal model:*
 
-![](/../main/Images/hierarchal_all.png)
+![](hierarchal_all.png)
 
 **Note:** As you can see in our path diagram of the hierarchal model we
 do not include the standard errors of our parameters. This is because
@@ -1652,7 +1610,7 @@ bifactor
 
 *The path diagram of the bifactor model:*
 
-![](/../main/Images/bifactor_all.png)
+![](bifactor_all.png)
 
 ## Models without the APOE region
 
@@ -1846,7 +1804,7 @@ Output of the genetic correlation matrix with the odd autosome results
 on the lower triangle and the even autosome results on the upper
 triangle:
 
-![](/../main/Images/odd_even_ldsc_matrix.jpg)
+![](odd_even_ldsc_matrix.jpg)
 
 ## EFA comparison across chromosomal groupings
 
