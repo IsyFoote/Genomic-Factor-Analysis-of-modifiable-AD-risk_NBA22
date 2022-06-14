@@ -1007,7 +1007,9 @@ dev.off()
 
 **Output image:**
 
-![](/../main/Images/ldscmatrix_bivariate.jpg)
+<p align="center">
+  <img width="500" src="/images/ldscmatrix_bivariate.jpg">
+</p>
 
 ### Undirected weighted graph
 
@@ -1076,7 +1078,9 @@ qplot <- qgraph(all_matrix, layout = "spring", minimum = 0, posCol = "darkblue",
 dev.off()
 ```
 
-**Output image:** ![](/../main/Images/undirected_weighted_graph_kunkle.jpg)
+<p align="center">
+  <img width="600" src="/images/undirected_weighted_graph_kunkle.jpg">
+</p>
 
 # Genomic SEM
 
@@ -1367,7 +1371,9 @@ dev.off()
 
 The above code gives us our 3-factor EFA graph:
 
-![](/../main/Images/EFA_loadings_plot_Kunkle.jpg)
+<p align="center">
+  <img width="700" src="/images/EFA_loadings_plot_Kunkle.jpg">
+</p>
 
 ## Confirmatory factor analysis performed in the even autosomes
 
@@ -1504,7 +1510,9 @@ the standardised results of the CFA for *model 5* in the even autosomes
 (see code above). This was the best fitting model that we tested so we
 took it forward for subsequent analysis in data from all autosomes.
 
-![](/../main/Images/CFA_even_best_model.png)
+<p align="center">
+  <img width="700" src="/images/CFA_even_best_model.png">
+</p>
 
 ## Follow-up genome-wide analyses
 
@@ -1542,7 +1550,9 @@ CFAoutput_all
 
 *The path diagram of the best-fitting CFA model (all autosomes):*
 
-![](/../main/Images/CFA_all_best_model.png)
+<p align="center">
+  <img width="700" src="/images/CFA_all_best_model.png">
+</p>
 
 ### Additional SEM modelling
 
@@ -1572,7 +1582,9 @@ CommonFactor
 
 *The path diagram of the common factor model:*
 
-![](/../main/Images/CommonFactor_all_SBP.png)
+<p align="center">
+  <img width="700" src="/images/CommonFactor_all_SBP.png">
+</p>
 
 **Note:** Here in this walkthrough we use the LDSC output that includes
 systolic blood pressure in the common factor model. However, in our
@@ -1601,7 +1613,9 @@ hierarchal
 
 *The path diagram of the hierarchal model:*
 
-![](/../main/Images/hierarchal_all.png)
+<p align="center">
+  <img width="700" src="/images/hierarchal_all.png">
+</p>
 
 **Note:** As you can see in our path diagram of the hierarchal model we
 do not include the standard errors of our parameters. This is because
@@ -1652,7 +1666,9 @@ bifactor
 
 *The path diagram of the bifactor model:*
 
-![](/../main/Images/bifactor_all.png)
+<p align="center">
+  <img width="700" src="/images/bifactor_all.png">
+</p>
 
 ## Models without the APOE region
 
@@ -1846,7 +1862,9 @@ Output of the genetic correlation matrix with the odd autosome results
 on the lower triangle and the even autosome results on the upper
 triangle:
 
-![](/../main/Images/odd_even_ldsc_matrix.jpg)
+<p align="center">
+  <img width="500" src="/images/odd_even_ldsc_matrix.jpg">
+</p>
 
 ## EFA comparison across chromosomal groupings
 
